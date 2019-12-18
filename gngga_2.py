@@ -17,8 +17,8 @@ for db_set in myfile.readlines():
     # Check the string position and store in a variable
     val1 = db_set.find("$GNGGA")
     if val1 > -1:
-        print(db_set)
-        print(val1)
+        # print(db_set)
+        # print(val1)
 
         data = db_set
         lat = data[(val1+18): (val1+28)]
@@ -34,3 +34,4 @@ for db_set in myfile.readlines():
         newFile = open("lat_lon_alt.csv", "a")
         newFile.writelines(str(lat) + ", " + str(lon) + ", " + str(alt) + "\n")
         newFile.close()
+        print("New file created name lat_lon_alt.csv file")
