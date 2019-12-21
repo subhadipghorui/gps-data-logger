@@ -1,5 +1,10 @@
 # Input TXT file path as string
-path = input("Enter File Path :")
+print("............................................................................................")
+print("Convert the GPS log file to .txt formate and Copy it to the same directory where the python programme present.")
+print("............................................................................................")
+print("Enter the file name in the input box like---- 2.txt")
+print("............................................................................................")
+path = input("Enter File Path (log.txt) :")
 
 # Enter the file path
 myfile = open(path, "r")
@@ -34,4 +39,6 @@ for db_set in myfile.readlines():
         newFile = open("lat_lon_alt.csv", "a")
         newFile.writelines(str(lat) + ", " + str(lon) + ", " + str(alt) + "\n")
         newFile.close()
-        print("New file created name lat_lon_alt.csv file")
+
+
+print("New file created name lat_lon_alt.csv file Successfully.")
